@@ -24,6 +24,27 @@
             background-color: #34344E;
             font-family: 'Inter', sans-serif;
         }
+        .stud{
+            color: var(--light-blue, #ECEEF8);
+            font-variant-numeric: lining-nums proportional-nums;
+
+            /* H1 */
+            font-family: Steelfish;
+            font-size: 230%;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%; /* 143px */
+            text-transform: uppercase;
+            padding-left: 0%;
+
+            
+        }
+        .photo{
+            border-radius: 200px;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+            /*transform: translateX(740px);*/
+            
+        }
     </style>
 </head>
 <body style="background-color: #34344E;">
@@ -65,12 +86,21 @@
             <h5 class='heed'>контакты</h5>
         </div>
         
-        
-            
-            
-        
-
     </header>
+    <div>
+        <!--<h1 class="stud">Студия для онлайн-трансляций,</h1>
+            <h1 class="stud">Видеосъемки</h1><img class='photo' src="1 photo.png">-->
 
-</body>
+                <div style="display: flex; align-items: center;">
+                    <h1 class="stud" style="margin-right: 10px;">Студия для онлайн-трансляций, </h1>
+                    <br>
+                    <h1 class="stud" style="margin-right: 10px;"> Видеосъемки</h1>
+                    <img class='photo' src="1 photo.png">
+                </div>
+
+
+            </div>
+    </div>
+
+</body>    
 </html>
