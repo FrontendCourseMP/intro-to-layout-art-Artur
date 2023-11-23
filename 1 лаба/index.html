@@ -6,45 +6,324 @@
     <title>1 project</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">   
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
+        html,
+        body, 
+        h1, 
+        p {
+            margin: 0;
+        }
+        
+        #intro{
+            padding: 90px 20px 0 20px;
+            width: 100%;
+            background-image: url(images/back.svg);
+            background-size: contain;
+            
+        }
+
+        @font-face {
+            font-family: "Steelfish";
+            src: url("fonts/SteelfishRg-Bold.woff") format('woff');
+            font-weight: bold;
+        }        
+
         .address, 
         .logo{
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         header{
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 10%;
+            font-weight: 400;
             height: 10vh;
             background-color: #34344E;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter';
+            gap: 10px;
+        }
+        .header-phone-wrapper{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 10px;
         }
         .stud{
             color: var(--light-blue, #ECEEF8);
             font-variant-numeric: lining-nums proportional-nums;
-
-            /* H1 */
-            font-family: Steelfish;
-            font-size: 230%;
+            /* H1 */         
+            font-size: 130px;                                                           font-family: 'Steelfish', sans-serif;
+            font-family: 'Steelfish';
             font-style: normal;
             font-weight: 700;
             line-height: 110%; /* 143px */
             text-transform: uppercase;
-            padding-left: 0%;
+            padding-left: 0%;           
+        }
+        
+        #intro .first-photo, 
+        #intro .second-photo{
+            border-radius: 200px;
+            align-self: center;
+        }
+        
+        #intro .first-photo{
+            width: 282px;
+            height: 108px;
+        }
+
+        #intro .second-photo{
+            width: 186px;
+            height: 108px;
+        }
+
+        .test-it-wrapper{
+            margin-top: 20px;
+            font-family: 'Inter', sans-serif;
+            color: #FFF;
+        }
+
+        .test-it-wrapper button{
+            border-radius: 100px;
+            background: var(--peach, #F49C89);
+            border: transparent;
+            outline: transparent;
+            color: #FFFFFF;
+            padding: 14px 36px;
+            gap: 10px;
+        }
+        
+        .test-it-wrapper p{
+            font-size: 14px;
+            line-height: 16px;
+            width: 392px;
+            font-weight: 400;
+        }
+
+        .flex-center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .menu-content{
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .burger{
+            display: none;
+        }
+
+        
+        #zones,
+        #other-zones{
+            padding-top: 80px;
+            width: 100%;
+            background-image: url(images/back-2.svg);
+            background-size: contain;
+        }
+
+        .zones-intro{
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 1024px){
+            .stud{
+                font-size: 90px;
+            }
+
+            .burger{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 20px;
+                cursor: pointer;
+            }
+            .burger-line{
+                width: 100%;
+                height: 1.5px;
+                background-color: var(--light-blue, #ECEEF8);
+            }
+
+            .burger-line:last-child{
+                width: 80%;
+                align-self: flex-end;
+            }
+
+            .menu-content{
+                display: none;
+            }
+        }
+
+        
+        @media screen and (max-width: 440px){
+            .address{
+                display: none;
+            }
+
+            .stud{
+                font-size: 50px;
+            }
+
+            .test-it-wrapper{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #intro .first-photo{
+                width: 85px;
+                height: 41px;
+            }
+
+            #intro .second-photo{
+                width: 62px;
+                height: 41px;
+            }
 
             
+            .test-it-wrapper button{
+                order: 1;
+            }
         }
-        .photo{
-            border-radius: 200px;
-            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-            /*transform: translateX(740px);*/
+
+        
+        .zone-card{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            margin: 10px;
+            width: 472px;
+            min-height: 276px;
+            font-family: Inter;
+        }
+        
+        .zone-card .zone-image{
+            width: 100%;
+            height: 336px;
+            background-size: cover;
+            background-position: center;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+    
+        .zone-card span,
+        .zone-card h1{
+            padding: 18px 20px;
+        }
+        
+        .zone-card p{
+            padding: 0 20px;
+        }
+        
+        .zone-card a{
+            padding: 20px;
+            padding-top: 0;
+        }
+
+        .zone-card h1{
+            color: #34344E;
+            font-family: 'Steelfish', sans-serif;
+            font-weight: 400;
+            font-size: 42px;
+            line-height: 29px;
+        }
+        
+        .zone-card span{
+            padding: 5px 12px;
+            background-color: #F49C89;
+            border-radius: 100px;
+            width: max-content;
+            color: #FFFFFF;
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 12px;
+            text-transform: uppercase;
+            transform: rotate(-5deg);
+            margin-left: 20px;
+        }
+
+        .zone-card a{
+            color: #F49C89;
+            text-transform: uppercase;
+        }
+
+        #zones .zone-cards-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        #zones .zone-card:nth-child(1) .zone-image{
+            background-image: url(images/zone-card-1.jpeg);
+        }
+
+        #zones .zone-card:nth-child(2) .zone-image{
+            background-image: url(images/zone-card-2.png);
+        }
+
+        
+        #zones .zone-card:nth-child(3) .zone-image{
+            background-image: url(images/zone-card-3.jpeg);
+        }
+
+        #zones .zone-card:nth-child(4) .zone-image{
+            background-image: url(images/zone-card-4.jpeg);
+        }
+
+        #other-zones .zone-card{
+            padding-bottom: 20px;
+            min-height: 500px;
+        }
+
+        #other-zones .swiper-container{
+            padding: 0 20px;
+            overflow: hidden;
+        }
+        
+        #other-zones .zone-cards-wrapper{
+            margin: auto;
+            width: 100%;
+            padding: 20px;
             
         }
+
+        #other-zones .zone-card:nth-child(1) .zone-image{
+            background-image: url(images/other-zone-1.jpeg);
+        }
+
+        #other-zones .zone-card:nth-child(2) .zone-image{
+            background-image: url(images/other-zone-3.jpeg);
+        }
+
+        #other-zones .zone-card:nth-child(3) .zone-image{
+            background-image: url(images/other-zone-2.jpeg);
+        }
+
+        #other-zones .zone-card:nth-child(4) .zone-image{
+            background-image: url(images/other-zone-4.jpeg);
+        }
+
     </style>
 </head>
 <body style="background-color: #34344E;">
@@ -70,38 +349,198 @@
                   <path d="M6.09374 15.0938H10.125C11.1604 15.0938 12 15.9333 12 16.9688C12 18.0042 11.1604 18.8438 10.125 18.8438H4.49999C3.46453 18.8438 2.625 19.6833 2.625 20.7188C2.625 21.7542 3.46453 22.5938 4.49999 22.5938H9.18748" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M13.4062 22.5938H17.9062" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                 </g>
-              </svg>
+            </svg>
             <h5 class="heed">8 минут от М. Маяковская</h5>
         </div>
-        <div>
-            <h5 class='heed'>студии</h5>
+
+        <ul class="menu-content">
+            <li>
+                <h5 class='heed'>студии</h5>
+            </li>
+            <li>
+                <h5 class='heed'>тест-драйв</h5>
+            </li>
+            <li>
+                <h5 class='heed'>кейсы</h5>
+            </li>
+            <li>
+                <h5 class='heed'>контакты</h5>
+            </li>
+        </ul>
+
+        <div class="header-phone-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <mask id="mask0_24_424" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                  <path d="M23.5 23.5V0.499977H0.5V23.5H23.5Z" fill="white" stroke="white"/>
+                </mask>
+                <g mask="url(#mask0_24_424)">
+                  <path d="M13.6606 0.473741C19.1033 0.473741 23.5311 4.90155 23.5311 10.3442" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.6606 3.29378C17.548 3.29378 20.7111 6.45691 20.7111 10.3443" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.6606 6.11421C15.9932 6.11421 17.8906 8.01166 17.8906 10.3442" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.6606 8.93425C14.4392 8.93425 15.0706 9.56571 15.0706 10.3443" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.31641 15.0938C8.24393 15.0938 8.18516 15.1526 8.18516 15.225C8.18516 15.2975 8.24389 15.3563 8.31641 15.3563C8.38893 15.3563 8.44766 15.2976 8.44766 15.225C8.44766 15.1525 8.38889 15.0938 8.31641 15.0938Z" fill="#F49C89" stroke="#F49C89" stroke-width="1.2"/>
+                  <path d="M6.94664 13.6222C6.64868 13.2308 6.36691 12.8274 6.10204 12.4129C5.75334 11.8668 5.85881 11.1436 6.31673 10.6856L7.90818 9.09414C8.25079 8.752 8.25079 8.19653 7.90818 7.85429L4.16282 4.10903C3.82064 3.76632 3.26521 3.76632 2.92303 4.10903L1.97517 5.05679C0.436777 6.59481 0.0209957 8.94226 0.986621 10.8913C2.70459 14.3596 6.2399 19.6762 13.0508 23.016C15.006 23.9742 17.3643 23.5678 18.9036 22.0284L19.873 21.059C20.2156 20.7168 20.2156 20.1614 19.873 19.8187L16.1277 16.0739C15.7855 15.7312 15.2301 15.7312 14.8879 16.0739L13.2965 17.6653C12.8384 18.1232 12.1152 18.2287 11.5691 17.88C10.9795 17.5032 10.4125 17.0924 9.87088 16.6495" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>
+            <h5 class='heed'>+7 (495) 123-45-67</h5>
         </div>
-        <div>
-            <h5 class='heed'>тест-драйв</h5>
-        </div>
-        <div>
-            <h5 class='heed'>кейсы</h5>
-        </div>
-        <div>
-            <h5 class='heed'>контакты</h5>
+
+        <div class="burger">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
         </div>
         
     </header>
-    <div>
-        <!--<h1 class="stud">Студия для онлайн-трансляций,</h1>
-            <h1 class="stud">Видеосъемки</h1><img class='photo' src="1 photo.png">-->
 
-                <div style="display: flex; align-items: center;">
-                    <h1 class="stud" style="margin-right: 10px;">Студия для онлайн-трансляций, </h1>
-                    <br>
-                    <h1 class="stud" style="margin-right: 10px;"> Видеосъемки</h1>
-                    <img class='photo' src="1 photo.png">
-                </div>
+    <section id="intro">
+        <h1 class="stud">Студия для онлайн-трансляций,</h1>
+        
+        <div class="flex-center">
+            <h1 class="stud">Видеосъемки</h1>
+            <img class='first-photo' src="images/studio-1.png">
+        </div>
+        <div class="flex-center">
+            <img class="second-photo" src="images/studio-2.png">
+            <h1 class="stud">и записи подкастов</h1>
+        </div>
 
+        <div class="test-it-wrapper flex-center">
+            <button type="button">
+                Получить бесплатный тест-драйв
+            </button>
+            <p>Съемочное пространство, оборудование и обслуживание от 3 900 ₽/час</p>
+        </div>
 
+    </section> 
+
+    <section id="zones">
+        <div class="zones-intro">
+        
+            <h1 class="stud">
+                В нашей студии есть несколько зон
+            </h1>
+            <h1 class="stud flex-center">
+                с разным интерьером
+            </h1>
+
+        </div>
+
+        <div class="zone-cards-wrapper">
+            <div class="zone-card">
+                <div class="zone-image"></div>
+                <h1>Кастом</h1>
+                <p>Большая студия с несколькими вариантами по сет-дизайну. Идеально подойдет для записи интервью, прямой трансляции и подкаста.</p>
+                <span>Стоимость</span>
+                <p>От 4 000 ₽/час</p>
+                <a href="">Подробнее о студии</a>
             </div>
+            
+            <div class="zone-card">
+                <div class="zone-image"></div>
+                <h1>Подкаст</h1>
+                <p>Студия с уютным лофт-дизайном, в которой есть все необходимое для записи подкаста и его видеоверсии</p>
+                <span>Стоимость</span>
+                <p>От 4 000 ₽/час</p>
+                <a href="">Подробнее о студии</a>
+            </div>
+            <div class="zone-card">
+                <div class="zone-image"></div>
+                <h1>Вебинар</h1>
+                <p>Небольшая студия с акцентом на проведение вебинаров и запись видеоуроков, с системой разноцветных фонов, прозрачной доской и теле-суфлером</p>
+                <span>Стоимость</span>
+                <p>От 4 000 ₽/час</p>
+                <a href="">Подробнее о студии</a>
+            </div>
+            
+            <div class="zone-card">
+                <div class="zone-image"></div>
+                <h1>Тут будет еще четвертая зона</h1>
+                <p>Тут будет текст</p>
+                <span>Стоимость</span>
+                <p>От 4 000 ₽/час</p>
+                <a href="">Подробнее о студии</a>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="other-zones">
+        <div class="zones-intro">
+            <h1 class="stud">
+                Продумали все до мелочей,
+            </h1>
+            <h1 class="stud">
+                чтобы освободить вашу голову от забот
+            </h1>
+        </div>
+
+        <div class="swiper-container">
+
+            <div class="zone-cards-wrapper swiper-wrapper">
+                <div class="zone-card swiper-slide">
+                    <div class="zone-image"></div>
+                    <h1>Зона отдыха</h1>
+                    <p>Большая комната ожидания с водой, чаем и кофе в дрип-пакетах</p>
+                </div>
+            
+                <div class="zone-card swiper-slide">
+                    <div class="zone-image"></div>
+                    <h1>Зона playback</h1>
+                    <p>Установлена плазма 55’, чтобы смотреть трансляцию из студии в режиме реального времени </p>
+                </div>
+            
+                <div class="zone-card swiper-slide">
+                    <div class="zone-image"></div>
+                    <h1>Зона грима</h1>
+                    <p>Отдельное помещение с грим-постом, вешалкой и отпаривателем</p>
+                </div>
+                <div class="zone-card swiper-slide">
+                    <div class="zone-image"></div>
+                    <h1>Парковочные места </h1>
+                    <p>2 парковочных места для наших гостей прямо под окнами в тихом, закрытом дворе</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            new Swiper(".swiper-container", {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: true,
+                },
+                cssMode: true,
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 5,
+                    },
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    },
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    }
+                }
+            });
+        </script>
     </div>
-    <p>slflsflfs</p>
+        
+
+    </div>
+        
+    </div>
+
+    </div>
+
     
 
 </body>    
