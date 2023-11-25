@@ -15,7 +15,10 @@
 />
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <style>
+
+
+
+<style>
         html,
         body, 
         h1, 
@@ -28,7 +31,10 @@
             width: 100%;
             background-image: url(images/back.svg);
             background-size: contain;
-            
+        }
+
+        #intro h1{
+            font-size: 130px;
         }
 
         @font-face {
@@ -50,11 +56,11 @@
             align-items: center;
             padding: 0 20px;
             font-weight: 400;
-            height: 10vh;
             background-color: #34344E;
             font-family: 'Inter';
             gap: 10px;
         }
+
         .header-phone-wrapper{
             display: flex;
             align-items: center;
@@ -65,7 +71,7 @@
             color: var(--light-blue, #ECEEF8);
             font-variant-numeric: lining-nums proportional-nums;
             /* H1 */         
-            font-size: 130px;                                                           font-family: 'Steelfish', sans-serif;
+            font-size: 92px;                                                           font-family: 'Steelfish', sans-serif;
             font-family: 'Steelfish';
             font-style: normal;
             font-weight: 700;
@@ -113,11 +119,18 @@
             font-weight: 400;
         }
 
+        
+        .flex-start,
         .flex-center{
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
+        }
+
+        .flex-start{
+            justify-content: flex-start;
+            align-items: flex-start;
         }
 
         .menu-content{
@@ -139,71 +152,14 @@
             background-size: contain;
         }
 
-        .zones-intro{
+        .intro{
             margin-left: 20px;
             margin-bottom: 20px;
         }
 
-        @media screen and (max-width: 1024px){
-            .stud{
-                font-size: 90px;
-            }
-
-            .burger{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 30px;
-                height: 20px;
-                cursor: pointer;
-            }
-            .burger-line{
-                width: 100%;
-                height: 1.5px;
-                background-color: var(--light-blue, #ECEEF8);
-            }
-
-            .burger-line:last-child{
-                width: 80%;
-                align-self: flex-end;
-            }
-
-            .menu-content{
-                display: none;
-            }
+        #check-price .intro h1{
+            font-size: 92px;
         }
-
-        
-        @media screen and (max-width: 440px){
-            .address{
-                display: none;
-            }
-
-            .stud{
-                font-size: 50px;
-            }
-
-            .test-it-wrapper{
-                flex-direction: column;
-                align-items: center;
-            }
-
-            #intro .first-photo{
-                width: 85px;
-                height: 41px;
-            }
-
-            #intro .second-photo{
-                width: 62px;
-                height: 41px;
-            }
-
-            
-            .test-it-wrapper button{
-                order: 1;
-            }
-        }
-
         
         .zone-card{
             display: flex;
@@ -222,8 +178,6 @@
             height: 336px;
             background-size: cover;
             background-position: center;
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
         }
     
         .zone-card span,
@@ -267,10 +221,13 @@
             text-transform: uppercase;
         }
 
+        .flex-wrap{
+            flex-wrap: wrap;
+        }
+
         #zones .zone-cards-wrapper{
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
             gap: 10px;
         }
         
@@ -324,224 +281,752 @@
             background-image: url(images/other-zone-4.jpeg);
         }
 
+        #check-price{
+            padding: 144px 0;
+            width: 100%;
+            background-image: url(images/back-3.svg);
+            background-size: contain;
+        }
+
+
+        #check-price p{
+            color: var(--white, #FFF);
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 16.8px */
+            letter-spacing: -0.24px;
+            width: 90ch;
+            text-transform: uppercase;
+            width: 804px;;
+        }
+
+        
+        
+        #check-price .studio-column{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 558px;
+        }
+
+        #check-price .studio-column p{
+            color: #34344E;
+            width: 100%;
+        }
+
+        #check-price .intro{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        
+        .container{
+            max-width: 1215px;
+            margin: auto;
+        }
+
+        .studio-line{
+            width: 100%;
+        }
+
+        
+    .check-price-box{
+        display: flex;
+        height: 578px;
+    }
+    
+    .check-price-calc{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 518px;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .check-price-img{
+        width: 598px;
+        height: 538px;
+        background-image: url(images/check-price.jpeg);
+        background-size: cover;
+        background-position: center;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 20px;
+    }
+
+    .studio-column label{
+        color: var(--dark, #34344E);
+        font-variant-numeric: lining-nums proportional-nums;
+        /* main medium */
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        align-self: stretch;
+        line-height: 140%; /* 21px */
+        letter-spacing: -0.6px;
+        text-transform: uppercase;
+    }
+
+        /* Style the radio button container */
+.radio-container {
+width: 24px;
+height: 24px;
+position: relative;
+box-sizing: border-box;
+appearance: none;
+outline: none; /* Remove default focus styles */
+}
+
+
+input[type='radio']::before,
+.radio-container::before {
+content: '';
+width: 24px;
+height: 24px;
+border-radius: 50%;
+position: absolute;
+background-color: #fff;
+display: inline-block;
+visibility: visible;
+border: 2px solid #F49C89;
+box-sizing: border-box;
+z-index: 1; /* Ensure the border is behind the inner circle */
+}
+
+input[type='radio']::before{
+border: none;
+opacity: 0;
+}
+
+input[type='radio']:checked::before,
+.radio-container input:checked::before {
+content: ''; /* Add a new pseudo-element for the inner circle */
+width: 16px; /* Adjust the size of the inner circle as needed */
+height: 16px;
+border-radius: 50%;
+opacity: 1;
+position: absolute;
+top: 50%;
+left: 50%;  
+transform: translate(-50%, -50%);
+background-color: #F49C89;
+box-sizing: border-box;
+z-index: 2; /* Ensure the inner circle is on top of the borders */
+}
+
+.price-price{
+color: var(--dark, #34344E);
+font-variant-numeric: lining-nums proportional-nums;
+
+/* H3 */
+flex: start;
+font-family: Steelfish;
+font-size: 42px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%; /* 46.2px */
+letter-spacing: 0.84px;
+text-transform: uppercase;
+
+}
+.price-pred{
+    color: var(--dark_light, rgba(52, 52, 78, 0.50));
+    font-variant-numeric: lining-nums proportional-nums;
+
+    /* main */
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 21px */
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+}              
+.button-test{
+    color: var(--white, #FFF);
+    border-radius: 100px;
+    background: var(--peach, #F49C89);
+    display: flex;
+    display: inline-flex;
+    padding: 14px 36px;
+    outline: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+        @media screen and (max-width: 1024px){
+            
+            #intro h1,
+            .stud{
+                font-size: 80px;
+            }
+
+            .burger{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 20px;
+                cursor: pointer;
+            }
+            .burger-line{
+                width: 100%;
+                height: 1.5px;
+                background-color: var(--light-blue, #ECEEF8);
+            }
+
+            .burger-line:last-child{
+                width: 80%;
+                align-self: flex-end;
+            }
+
+            .menu-content{
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            
+            #check-price h1, 
+            .stud{
+                font-size: 80px;
+            }
+
+            
+            #zones .zone-cards-wrapper{
+                justify-content: center;
+            }
+        }
+
+        
+        @media screen and (max-width: 440px){
+            .address{
+                display: none;
+            }
+
+            .check-price-box{
+                flex-direction: column;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .check-price-calc{
+                order: 2;
+                width: 85%;
+                border-top-left-radius: 0px;
+                border-bottom-right-radius: 10px;
+            }
+            
+            .check-price-img{
+                border-radius: 10px;
+                margin-top: 10px;
+                width: 320px;
+                height: 280px;
+                background-position: unset;
+            }
+
+            #intro h1,
+            #check-price h1,
+            .stud{
+                font-size: 40px;
+            }
+            
+            #check-price .studio-column{
+                width: 100%;
+                flex-flow: row wrap;    
+            }
+
+            .studio-line{
+                flex-direction: column;
+            }
+
+            .studio-column label{
+                font-size: 12px;
+            }
+
+            .studio-column .flex-start{
+                min-width: 130px;
+            }
+
+            #check-price p{
+                font-size: 12px;
+                width: 320px;
+            }
+
+            .test-it-wrapper{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #intro .first-photo{
+                width: 85px;
+                height: 41px;
+            }
+
+            #intro .second-photo{
+                width: 62px;
+                height: 41px;
+            }
+
+            
+            #zones .zone-cards-wrapper{
+                justify-content: center;
+            }
+
+            .test-it-wrapper button{
+                order: 1;
+            }
+            
+            #check-price .studio-line.flex-start:last-child .studio-column {
+                flex-direction: column;
+                width: max-content;
+            }
+            .studio-line:last-child{
+                flex-direction: row;
+            }
+            
+            #check-price .price-pred{
+                font-size: 12px;
+            }
+            
+        }
+
+
     </style>
+
+
 </head>
 <body style="background-color: #34344E;">
-    <header>
-        <div class="logo">
-            
-            <div class="circle"></div>
-            <h6 class='heed'> TOCHKA </h6>
-        </div>
-
-        <div class="address">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <mask id="mask0_1_425" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                  <path d="M23.4999 23.5V0.500078H0.5V23.5H23.4999Z" fill="white" stroke="white"/>
-                </mask>
-                <g mask="url(#mask0_1_425)">
-                  <path d="M5.15624 14.1563L1.25625 7.75739C0.758906 7.01302 0.46875 6.11865 0.46875 5.15631C0.46875 2.56741 2.56734 0.468821 5.15624 0.468821C7.74513 0.468821 9.84372 2.56741 9.84372 5.15631C9.84372 6.11865 9.55357 7.01302 9.05622 7.75739L5.15624 14.1563Z" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M7.03124 5.15632C7.03124 6.19178 6.19171 7.03131 5.15624 7.03131C4.12078 7.03131 3.28125 6.19178 3.28125 5.15632C3.28125 4.12085 4.12078 3.28132 5.15624 3.28132C6.19171 3.28132 7.03124 4.12085 7.03124 5.15632Z" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M18.8437 21.6563C19.3617 21.6563 19.7812 22.0763 19.7812 22.5938C19.7812 23.1117 19.3617 23.5313 18.8437 23.5313C18.3258 23.5313 17.9062 23.1117 17.9062 22.5938C17.9062 22.0763 18.3258 21.6563 18.8437 21.6563ZM18.8437 21.6563L14.9437 15.5386C14.4464 14.7943 14.1562 13.8999 14.1562 12.9375C14.1562 10.3486 16.2548 8.25005 18.8437 8.25005C21.4326 8.25005 23.5312 10.3486 23.5312 12.9375C23.5312 13.8999 23.2411 14.7943 22.7437 15.5386L18.8437 21.6563Z" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M20.7187 12.9375C20.7187 13.973 19.8792 14.8125 18.8437 14.8125C17.8083 14.8125 16.9688 13.973 16.9688 12.9375C16.9688 11.9021 17.8083 11.0625 18.8437 11.0625C19.8792 11.0625 20.7187 11.9021 20.7187 12.9375Z" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6.09374 15.0938C6.09374 15.6118 5.67421 16.0313 5.15625 16.0313C4.63828 16.0313 4.21875 15.6118 4.21875 15.0938C4.21875 14.5763 4.63828 14.1563 5.15625 14.1563C5.67421 14.1563 6.09374 14.5763 6.09374 15.0938Z" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M11.2969 22.5625C11.2796 22.5625 11.2656 22.5765 11.2656 22.5938C11.2656 22.611 11.2796 22.625 11.2969 22.625C11.3141 22.625 11.3281 22.611 11.3281 22.5938C11.3281 22.5765 11.3141 22.5625 11.2969 22.5625Z" fill="#F49C89" stroke="#F49C89"/>
-                  <path d="M6.09374 15.0938H10.125C11.1604 15.0938 12 15.9333 12 16.9688C12 18.0042 11.1604 18.8438 10.125 18.8438H4.49999C3.46453 18.8438 2.625 19.6833 2.625 20.7188C2.625 21.7542 3.46453 22.5938 4.49999 22.5938H9.18748" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M13.4062 22.5938H17.9062" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </g>
-            </svg>
-            <h5 class="heed">8 минут от М. Маяковская</h5>
-        </div>
-
-        <ul class="menu-content">
-            <li>
-                <h5 class='heed'>студии</h5>
-            </li>
-            <li>
-                <h5 class='heed'>тест-драйв</h5>
-            </li>
-            <li>
-                <h5 class='heed'>кейсы</h5>
-            </li>
-            <li>
-                <h5 class='heed'>контакты</h5>
-            </li>
-        </ul>
-
-        <div class="header-phone-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <mask id="mask0_24_424" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                  <path d="M23.5 23.5V0.499977H0.5V23.5H23.5Z" fill="white" stroke="white"/>
-                </mask>
-                <g mask="url(#mask0_24_424)">
-                  <path d="M13.6606 0.473741C19.1033 0.473741 23.5311 4.90155 23.5311 10.3442" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M13.6606 3.29378C17.548 3.29378 20.7111 6.45691 20.7111 10.3443" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M13.6606 6.11421C15.9932 6.11421 17.8906 8.01166 17.8906 10.3442" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M13.6606 8.93425C14.4392 8.93425 15.0706 9.56571 15.0706 10.3443" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M8.31641 15.0938C8.24393 15.0938 8.18516 15.1526 8.18516 15.225C8.18516 15.2975 8.24389 15.3563 8.31641 15.3563C8.38893 15.3563 8.44766 15.2976 8.44766 15.225C8.44766 15.1525 8.38889 15.0938 8.31641 15.0938Z" fill="#F49C89" stroke="#F49C89" stroke-width="1.2"/>
-                  <path d="M6.94664 13.6222C6.64868 13.2308 6.36691 12.8274 6.10204 12.4129C5.75334 11.8668 5.85881 11.1436 6.31673 10.6856L7.90818 9.09414C8.25079 8.752 8.25079 8.19653 7.90818 7.85429L4.16282 4.10903C3.82064 3.76632 3.26521 3.76632 2.92303 4.10903L1.97517 5.05679C0.436777 6.59481 0.0209957 8.94226 0.986621 10.8913C2.70459 14.3596 6.2399 19.6762 13.0508 23.016C15.006 23.9742 17.3643 23.5678 18.9036 22.0284L19.873 21.059C20.2156 20.7168 20.2156 20.1614 19.873 19.8187L16.1277 16.0739C15.7855 15.7312 15.2301 15.7312 14.8879 16.0739L13.2965 17.6653C12.8384 18.1232 12.1152 18.2287 11.5691 17.88C10.9795 17.5032 10.4125 17.0924 9.87088 16.6495" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </g>
-            </svg>
-            <h5 class='heed'>+7 (495) 123-45-67</h5>
-        </div>
-
-        <div class="burger">
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-        </div>
+    <div class="container">
+        <header>
+            <div class="logo">
         
-    </header>
-
-    <section id="intro">
-        <h1 class="stud">Студия для онлайн-трансляций,</h1>
+                <div class="circle"></div>
+                <h6 class='heed'> TOCHKA </h6>
+            </div>
+            <div class="address">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <mask id="mask0_1_425" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                      <path d="M23.4999 23.5V0.500078H0.5V23.5H23.4999Z" fill="white" stroke="white"/>
+                    </mask>
+                    <g mask="url(#mask0_1_425)">
+                      <path d="M5.15624 14.1563L1.25625 7.75739C0.758906 7.01302 0.46875 6.11865 0.46875 5.15631C0.46875 2.56741 2.56734 0.468821 5.15624 0.468821C7.74513 0.468821 9.84372 2.56741 9.84372 5.15631C9.84372 6.11865 9.55357 7.01302 9.05622 7.75739L5.15624 14.1563Z" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7.03124 5.15632C7.03124 6.19178 6.19171 7.03131 5.15624 7.03131C4.12078 7.03131 3.28125 6.19178 3.28125 5.15632C3.28125 4.12085 4.12078 3.28132 5.15624 3.28132C6.19171 3.28132 7.03124 4.12085 7.03124 5.15632Z" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M18.8437 21.6563C19.3617 21.6563 19.7812 22.0763 19.7812 22.5938C19.7812 23.1117 19.3617 23.5313 18.8437 23.5313C18.3258 23.5313 17.9062 23.1117 17.9062 22.5938C17.9062 22.0763 18.3258 21.6563 18.8437 21.6563ZM18.8437 21.6563L14.9437 15.5386C14.4464 14.7943 14.1562 13.8999 14.1562 12.9375C14.1562 10.3486 16.2548 8.25005 18.8437 8.25005C21.4326 8.25005 23.5312 10.3486 23.5312 12.9375C23.5312 13.8999 23.2411 14.7943 22.7437 15.5386L18.8437 21.6563Z" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M20.7187 12.9375C20.7187 13.973 19.8792 14.8125 18.8437 14.8125C17.8083 14.8125 16.9688 13.973 16.9688 12.9375C16.9688 11.9021 17.8083 11.0625 18.8437 11.0625C19.8792 11.0625 20.7187 11.9021 20.7187 12.9375Z" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M6.09374 15.0938C6.09374 15.6118 5.67421 16.0313 5.15625 16.0313C4.63828 16.0313 4.21875 15.6118 4.21875 15.0938C4.21875 14.5763 4.63828 14.1563 5.15625 14.1563C5.67421 14.1563 6.09374 14.5763 6.09374 15.0938Z" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M11.2969 22.5625C11.2796 22.5625 11.2656 22.5765 11.2656 22.5938C11.2656 22.611 11.2796 22.625 11.2969 22.625C11.3141 22.625 11.3281 22.611 11.3281 22.5938C11.3281 22.5765 11.3141 22.5625 11.2969 22.5625Z" fill="#F49C89" stroke="#F49C89"/>
+                      <path d="M6.09374 15.0938H10.125C11.1604 15.0938 12 15.9333 12 16.9688C12 18.0042 11.1604 18.8438 10.125 18.8438H4.49999C3.46453 18.8438 2.625 19.6833 2.625 20.7188C2.625 21.7542 3.46453 22.5938 4.49999 22.5938H9.18748" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M13.4062 22.5938H17.9062" stroke="#F49C89" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                </svg>
+                <h5 class="heed">8 минут от М. Маяковская</h5>
+            </div>
+            <ul class="menu-content">
+                <li>
+                    <h5 class='heed'>студии</h5>
+                </li>
+                <li>
+                    <h5 class='heed'>тест-драйв</h5>
+                </li>
+                <li>
+                    <h5 class='heed'>кейсы</h5>
+                </li>
+                <li>
+                    <h5 class='heed'>контакты</h5>
+                </li>
+            </ul>
+            <div class="header-phone-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <mask id="mask0_24_424" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                      <path d="M23.5 23.5V0.499977H0.5V23.5H23.5Z" fill="white" stroke="white"/>
+                    </mask>
+                    <g mask="url(#mask0_24_424)">
+                      <path d="M13.6606 0.473741C19.1033 0.473741 23.5311 4.90155 23.5311 10.3442" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M13.6606 3.29378C17.548 3.29378 20.7111 6.45691 20.7111 10.3443" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M13.6606 6.11421C15.9932 6.11421 17.8906 8.01166 17.8906 10.3442" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M13.6606 8.93425C14.4392 8.93425 15.0706 9.56571 15.0706 10.3443" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8.31641 15.0938C8.24393 15.0938 8.18516 15.1526 8.18516 15.225C8.18516 15.2975 8.24389 15.3563 8.31641 15.3563C8.38893 15.3563 8.44766 15.2976 8.44766 15.225C8.44766 15.1525 8.38889 15.0938 8.31641 15.0938Z" fill="#F49C89" stroke="#F49C89" stroke-width="1.2"/>
+                      <path d="M6.94664 13.6222C6.64868 13.2308 6.36691 12.8274 6.10204 12.4129C5.75334 11.8668 5.85881 11.1436 6.31673 10.6856L7.90818 9.09414C8.25079 8.752 8.25079 8.19653 7.90818 7.85429L4.16282 4.10903C3.82064 3.76632 3.26521 3.76632 2.92303 4.10903L1.97517 5.05679C0.436777 6.59481 0.0209957 8.94226 0.986621 10.8913C2.70459 14.3596 6.2399 19.6762 13.0508 23.016C15.006 23.9742 17.3643 23.5678 18.9036 22.0284L19.873 21.059C20.2156 20.7168 20.2156 20.1614 19.873 19.8187L16.1277 16.0739C15.7855 15.7312 15.2301 15.7312 14.8879 16.0739L13.2965 17.6653C12.8384 18.1232 12.1152 18.2287 11.5691 17.88C10.9795 17.5032 10.4125 17.0924 9.87088 16.6495" stroke="#F49C89" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                </svg>
+                <h5 class='heed'>+7 (495) 123-45-67</h5>
+            </div>
+            <div class="burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
         
-        <div class="flex-center">
-            <h1 class="stud">Видеосъемки</h1>
-            <img class='first-photo' src="images/studio-1.png">
-        </div>
-        <div class="flex-center">
-            <img class="second-photo" src="images/studio-2.png">
-            <h1 class="stud">и записи подкастов</h1>
-        </div>
-
-        <div class="test-it-wrapper flex-center">
-            <button type="button">
-                Получить бесплатный тест-драйв
-            </button>
-            <p>Съемочное пространство, оборудование и обслуживание от 3 900 ₽/час</p>
-        </div>
-
-    </section> 
-
-    <section id="zones">
-        <div class="zones-intro">
+        </header>
+        <section id="intro">
+            <h1 class="stud">Студия для онлайн-трансляций,</h1>
         
-            <h1 class="stud">
-                В нашей студии есть несколько зон
-            </h1>
-            <h1 class="stud flex-center">
-                с разным интерьером
-            </h1>
-
-        </div>
-
-        <div class="zone-cards-wrapper">
-            <div class="zone-card">
-                <div class="zone-image"></div>
-                <h1>Кастом</h1>
-                <p>Большая студия с несколькими вариантами по сет-дизайну. Идеально подойдет для записи интервью, прямой трансляции и подкаста.</p>
-                <span>Стоимость</span>
-                <p>От 4 000 ₽/час</p>
-                <a href="">Подробнее о студии</a>
+            <div class="flex-center">
+                <h1 class="stud">Видеосъемки</h1>
+                <img class='first-photo' src="images/studio-1.png">
             </div>
-            
-            <div class="zone-card">
-                <div class="zone-image"></div>
-                <h1>Подкаст</h1>
-                <p>Студия с уютным лофт-дизайном, в которой есть все необходимое для записи подкаста и его видеоверсии</p>
-                <span>Стоимость</span>
-                <p>От 4 000 ₽/час</p>
-                <a href="">Подробнее о студии</a>
+            <div class="flex-center">
+                <img class="second-photo" src="images/studio-2.png">
+                <h1 class="stud">и записи подкастов</h1>
             </div>
-            <div class="zone-card">
-                <div class="zone-image"></div>
-                <h1>Вебинар</h1>
-                <p>Небольшая студия с акцентом на проведение вебинаров и запись видеоуроков, с системой разноцветных фонов, прозрачной доской и теле-суфлером</p>
-                <span>Стоимость</span>
-                <p>От 4 000 ₽/час</p>
-                <a href="">Подробнее о студии</a>
+            <div class="test-it-wrapper flex-center">
+                <button type="button">
+                    Получить бесплатный тест-драйв
+                </button>
+                <p>Съемочное пространство, оборудование и обслуживание от 3 900 ₽/час</p>
             </div>
-            
-            <div class="zone-card">
-                <div class="zone-image"></div>
-                <h1>Тут будет еще четвертая зона</h1>
-                <p>Тут будет текст</p>
-                <span>Стоимость</span>
-                <p>От 4 000 ₽/час</p>
-                <a href="">Подробнее о студии</a>
+        </section>
+        <section id="zones">
+            <div class="intro">
+        
+                <h1 class="stud">
+                    В нашей студии есть несколько зон
+                </h1>
+                <h1 class="stud flex-center">
+                    с разным интерьером
+                </h1>
             </div>
-        </div>
-
-    </section>
-
-    <div id="other-zones">
-        <div class="zones-intro">
-            <h1 class="stud">
-                Продумали все до мелочей,
-            </h1>
-            <h1 class="stud">
-                чтобы освободить вашу голову от забот
-            </h1>
-        </div>
-
-        <div class="swiper-container">
-
-            <div class="zone-cards-wrapper swiper-wrapper">
-                <div class="zone-card swiper-slide">
+            <div class="zone-cards-wrapper">
+                <div class="zone-card">
                     <div class="zone-image"></div>
-                    <h1>Зона отдыха</h1>
-                    <p>Большая комната ожидания с водой, чаем и кофе в дрип-пакетах</p>
+                    <h1>Кастом</h1>
+                    <p>Большая студия с несколькими вариантами по сет-дизайну. Идеально подойдет для записи интервью, прямой трансляции и подкаста.</p>
+                    <span>Стоимость</span>
+                    <p>От 4 000 ₽/час</p>
+                    <a href="">Подробнее о студии</a>
                 </div>
-            
-                <div class="zone-card swiper-slide">
+        
+                <div class="zone-card">
                     <div class="zone-image"></div>
-                    <h1>Зона playback</h1>
-                    <p>Установлена плазма 55’, чтобы смотреть трансляцию из студии в режиме реального времени </p>
+                    <h1>Подкаст</h1>
+                    <p>Студия с уютным лофт-дизайном, в которой есть все необходимое для записи подкаста и его видеоверсии</p>
+                    <span>Стоимость</span>
+                    <p>От 4 000 ₽/час</p>
+                    <a href="">Подробнее о студии</a>
                 </div>
-            
-                <div class="zone-card swiper-slide">
+                <div class="zone-card">
                     <div class="zone-image"></div>
-                    <h1>Зона грима</h1>
-                    <p>Отдельное помещение с грим-постом, вешалкой и отпаривателем</p>
+                    <h1>Вебинар</h1>
+                    <p>Небольшая студия с акцентом на проведение вебинаров и запись видеоуроков, с системой разноцветных фонов, прозрачной доской и теле-суфлером</p>
+                    <span>Стоимость</span>
+                    <p>От 4 000 ₽/час</p>
+                    <a href="">Подробнее о студии</a>
                 </div>
-                <div class="zone-card swiper-slide">
+        
+                <div class="zone-card">
                     <div class="zone-image"></div>
-                    <h1>Парковочные места </h1>
-                    <p>2 парковочных места для наших гостей прямо под окнами в тихом, закрытом дворе</p>
+                    <h1>Тут будет еще четвертая зона</h1>
+                    <p>Тут будет текст</p>
+                    <span>Стоимость</span>
+                    <p>От 4 000 ₽/час</p>
+                    <a href="">Подробнее о студии</a>
                 </div>
             </div>
-        </div>
-
-        <script>
-            new Swiper(".swiper-container", {
-                slidesPerView: 2,
-                spaceBetween: 10,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: true,
-                },
-                cssMode: true,
-                breakpoints: {
-                    1024: {
-                        slidesPerView: 2,
-                        spaceBetween: 10,
+        </section>
+        <section id="other-zones">
+            <div class="intro">
+                <h1 class="stud">
+                    Продумали все до мелочей,
+                </h1>
+                <h1 class="stud">
+                    чтобы освободить вашу голову от забот
+                </h1>
+            </div>
+            <div class="swiper-container">
+                <div class="zone-cards-wrapper swiper-wrapper">
+                    <div class="zone-card swiper-slide">
+                        <div class="zone-image"></div>
+                        <h1>Зона отдыха</h1>
+                        <p>Большая комната ожидания с водой, чаем и кофе в дрип-пакетах</p>
+                    </div>
+        
+                    <div class="zone-card swiper-slide">
+                        <div class="zone-image"></div>
+                        <h1>Зона playback</h1>
+                        <p>Установлена плазма 55’, чтобы смотреть трансляцию из студии в режиме реального времени </p>
+                    </div>
+        
+                    <div class="zone-card swiper-slide">
+                        <div class="zone-image"></div>
+                        <h1>Зона грима</h1>
+                        <p>Отдельное помещение с грим-постом, вешалкой и отпаривателем</p>
+                    </div>
+                    <div class="zone-card swiper-slide">
+                        <div class="zone-image"></div>
+                        <h1>Парковочные места </h1>
+                        <p>2 парковочных места для наших гостей прямо под окнами в тихом, закрытом дворе</p>
+                    </div>
+                </div>
+            </div>
+            <script>
+                new Swiper(".swiper-container", {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: true,
                     },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 5,
-                    },
-                    640: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                    320: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
+                    cssMode: true,
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 5,
+                        },
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        }
                     }
-                }
-            });
-        </script>
-    </div>
+                });
+            </script>
+        </section>
         
+        <section id="check-price">
+            <div class="intro">
+                <h1 class="stud">
+                    Узнайте предварительную
+                    стоимость
+                </h1>
+                <p>Работа команды, использование общей зоны, грим-пост и парковочные места включены в стоимость. Стоимость студии без сопровождения (команды) обсуждается индивидуально.</p>
+            </div>
 
-    </div>
+
+            <div class="check-price-box">
+                <div class="check-price-calc">
+                    <div class="studio-line flex-start">
+                        <div class="studio-column">
+                            <p>Выберите студию</p>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup">
+                                </div>
+                                <label for="radioButton">
+                                    Кастом
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup">
+                                </div>
+                                <label for="radioButton">
+                                    Подкаст
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup">
+                                </div>
+                                <label for="radioButton">
+                                    Вебинар
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup">
+                                </div>
+                                <label for="radioButton">
+                                    Подкаст
+                                </label>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="studio-column">
+                            <p>Продолжительность</p>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup2">
+                                </div>
+                                <label for="radioButton">
+                                    1-2 часа
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup2">
+                                </div>
+                                <label for="radioButton">
+                                    3 часа
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup2">
+                                </div>
+                                <label for="radioButton">
+                                    4 часа
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup2">
+                                </div>
+                                <label for="radioButton">
+                                    5 и более
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <hr width="100%">
+                    <div class="studio-line flex-start">
+                        <div class="studio-column">
+                            <p>Кол-во камер</p>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup3">
+                                </div>
+                                <label for="radioButton">
+                                    1 камера
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup3">
+                                </div>
+                                <label for="radioButton">
+                                    2 камеры
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup3">
+                                </div>
+                                <label for="radioButton">
+                                    3 камеры
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup">
+                                </div>
+                                <label for="radioButton">
+                                    4 камеры
+                                </label>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="studio-column">
+                            <p>кол-во героев в кадре</p>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup4">
+                                </div>
+                                <label for="radioButton">
+                                    1 человек
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup4">
+                                </div>
+                                <label for="radioButton">
+                                    2 человека
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup4">
+                                </div>
+                                <label for="radioButton">
+                                    3 человека
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup4">
+                                </div>
+                                <label for="radioButton">
+                                    4 и более
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr width="100%">
+                    <div class="studio-line flex-start">
+                        <div class="studio-column">
+                            <p>тип услуги</p>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup5">
+                                </div>
+                                <label for="radioButton">
+                                    запись
+                                </label>
+                            </div>
+                            <div class="flex-start">
+                                <div class="radio-container">
+                                    <input type="radio" id="radioButton" name="radioGroup5">
+                                </div>
+                                <label for="radioButton">
+                                    стрим
+                                </label>
+                            </div>
+                        </div>
+                        <div class="studio-column">
+                            
+                            <div class="flex-start">
+                                <h1 class="price-price">
+                                    15 000 ₽
+                                </h1>    
+                            </div>
+                            <div>
+                                <h1 class="price-pred">
+                                    Предварительная стоимость
+                                </h1>
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="check-price-img">
+                    <button class="button-test">
+                        Забронировать студию
+                    </button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="equipment">
+            <div class="intro">
+        
+                <h1 class="stud">
+                    установлено новое съемочное                </h1>
+                <h1 class="stud flex-center">
+                    оборудование и осветительные приборы
+                </h1>
+            </div>
+        </section>
         
     </div>
-
-    </div>
-
-    
 
 </body>    
 </html> 
