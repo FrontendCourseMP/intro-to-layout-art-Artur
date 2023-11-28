@@ -291,7 +291,8 @@
         }
 
 
-        #check-price p{
+        #check-price p, 
+        .equipment-container p{
             color: var(--white, #FFF);
             font-variant-numeric: lining-nums proportional-nums;
             font-family: Inter;
@@ -302,7 +303,7 @@
             letter-spacing: -0.24px;
             width: 90ch;
             text-transform: uppercase;
-            width: 804px;;
+            width: 320px;
         }
 
         
@@ -335,12 +336,12 @@
         }
 
         
-    .check-price-box{
+    .check-price-box, .equipment-container{
         display: flex;
         height: 578px;
     }
     
-    .check-price-calc{
+    .check-price-calc, .equipment-choose{
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
         width: 518px;
@@ -352,7 +353,14 @@
         flex-direction: column; 
     }
 
-    .check-price-img{
+    .equipment-choose{
+        background-color: transparent;
+        width: 50%;
+    }
+
+    
+    .equipment-choose-img--mobile,
+    .check-price-img, .equipment-choose-img{
         width: 598px;
         height: 538px;
         background-image: url(images/check-price.jpeg);
@@ -364,6 +372,18 @@
         justify-content: flex-end;
         align-items: flex-end;
         padding: 20px;
+    }
+    
+    .equipment-choose-img--mobile,
+    .equipment-choose-img{
+        background-image: url(images/camera.jpeg);
+        width: 598px;
+        height: 436px;
+        border-radius: 10px;
+    }
+    
+    .equipment-choose-img--mobile{
+        display: none;
     }
 
     .studio-column label{
@@ -381,137 +401,316 @@
     }
 
         /* Style the radio button container */
-.radio-container {
-width: 24px;
-height: 24px;
-position: relative;
-box-sizing: border-box;
-appearance: none;
-outline: none; /* Remove default focus styles */
-}
+    .radio-container {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        box-sizing: border-box;
+        appearance: none;
+        outline: none; /* Remove default focus styles */
+    }
 
 
-input[type='radio']::before,
-.radio-container::before {
-content: '';
-width: 24px;
-height: 24px;
-border-radius: 50%;
-position: absolute;
-background-color: #fff;
-display: inline-block;
-visibility: visible;
-border: 2px solid #F49C89;
-box-sizing: border-box;
-z-index: 1; /* Ensure the border is behind the inner circle */
-}
+    input[type='radio']::before,
+    .radio-container::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: #fff;
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid #F49C89;
+        box-sizing: border-box;
+        z-index: 1; /* Ensure the border is behind the inner circle */
+    }
 
-input[type='radio']::before{
-border: none;
-opacity: 0;
-}
+    input[type='radio']::before{
+        border: none;
+        opacity: 0;
+    }
 
-input[type='radio']:checked::before,
-.radio-container input:checked::before {
-content: ''; /* Add a new pseudo-element for the inner circle */
-width: 16px; /* Adjust the size of the inner circle as needed */
-height: 16px;
-border-radius: 50%;
-opacity: 1;
-position: absolute;
-top: 50%;
-left: 50%;  
-transform: translate(-50%, -50%);
-background-color: #F49C89;
-box-sizing: border-box;
-z-index: 2; /* Ensure the inner circle is on top of the borders */
-}
+    input[type='radio']:checked::before,
+    .radio-container input:checked::before {
+        content: ''; /* Add a new pseudo-element for the inner circle */
+        width: 16px; /* Adjust the size of the inner circle as needed */
+        height: 16px;
+        border-radius: 50%;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;  
+        transform: translate(-50%, -50%);
+        background-color: #F49C89;
+        box-sizing: border-box;
+        z-index: 2; /* Ensure the inner circle is on top of the borders */
+    }
 
-.price-price{
-color: var(--dark, #34344E);
-font-variant-numeric: lining-nums proportional-nums;
+    .price-price{
+        color: var(--dark, #34344E);
+        font-variant-numeric: lining-nums proportional-nums;
 
-/* H3 */
-flex: start;
-font-family: Steelfish;
-font-size: 42px;
-font-style: normal;
-font-weight: 400;
-line-height: 110%; /* 46.2px */
-letter-spacing: 0.84px;
-text-transform: uppercase;
+        /* H3 */
+        flex: start;
+        font-family: Steelfish;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 46.2px */
+        letter-spacing: 0.84px;
+        text-transform: uppercase;
+    }
+    
+    .price-pred{
+        color: var(--dark_light, rgba(52, 52, 78, 0.50));
+        font-variant-numeric: lining-nums proportional-nums;
 
-}
-.price-pred{
-    color: var(--dark_light, rgba(52, 52, 78, 0.50));
-    font-variant-numeric: lining-nums proportional-nums;
+        /* main */
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 21px */
+        letter-spacing: -0.6px;
+        text-transform: uppercase;
+    }
 
-    /* main */
-    font-family: Inter;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 21px */
-    letter-spacing: -0.6px;
-    text-transform: uppercase;
-}              
-.button-test{
-    color: var(--white, #FFF);
-    border-radius: 100px;
-    background: var(--peach, #F49C89);
-    display: flex;
-    display: inline-flex;
-    padding: 14px 36px;
-    outline: none;
-    border: none;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
+    .button-test{
+        color: var(--white, #FFF);
+        border-radius: 100px;
+        background: var(--peach, #F49C89);
+        display: flex;
+        display: inline-flex;
+        padding: 14px 36px;
+        outline: none;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
 
-        @media screen and (max-width: 1024px){
-            
-            #intro h1,
-            .stud{
-                font-size: 80px;
-            }
+    
+    .equipment-cards-wrapper{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
 
-            .burger{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 30px;
-                height: 20px;
-                cursor: pointer;
-            }
-            .burger-line{
-                width: 100%;
-                height: 1.5px;
-                background-color: var(--light-blue, #ECEEF8);
-            }
+    .equipment-card{
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        align-self: stretch;
+        border-radius: 10px;
+        border: 3px solid var(--peach, #F49C89);
+        background: var(--light-blue, #ECEEF8);
+    }
 
-            .burger-line:last-child{
-                width: 80%;
-                align-self: flex-end;
-            }
+    .equipment-card-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        flex: 1 0 0;
+    }
 
-            .menu-content{
-                display: none;
-            }
+    .equipment-card-icon{
+        width: 60px;
+        height: 50px;
+        background-size: cover;
+        border-radius: 10px;
+        background-repeat: no-repeat;
+    }
+
+    .equipment-card-content p{
+        color: var(--dark, #34344E);
+        font-variant-numeric: lining-nums proportional-nums;
+        width: 468px;
+        /* main */
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 21px */
+        letter-spacing: -0.6px;
+        text-transform: uppercase;
+    }
+
+    .equipment-card:nth-child(1) .equipment-card-icon{
+        background-image: url(images/camera.jpeg);
+    }
+    
+    .equipment-card:nth-child(3) .equipment-card-icon{
+        background-image: url(images/microphone.jpeg);
+    }
+
+    .equipment-card:nth-child(4) .equipment-card-icon{
+        background-image: url(images/lighting.jpeg);
+    }
+
+    .equipment-card:nth-child(5) .equipment-card-icon{
+        background-image: url(images/recording.jpeg);
+    }
+
+    .equipment-card:nth-child(6) .equipment-card-icon{
+        background-image: url(images/parallone.jpeg);
+    }
+
+    /* circle filled with peach color */
+    .equipment-choosen-circle{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--peach, #F49C89);
+    }
+
+    #studio-placement{
+        padding: 144px 0;
+        width: 100%;
+        background-image: url(images/back-4.svg);
+    }
+
+    .flat-scheme-img{
+        width: 100%;
+        height: 547px;
+        background-position: center;
+        background-size: contain;
+        background-image: url(images/scheme.png);
+    }
+
+    @media screen and (max-width: 1024px){
+        
+        #intro h1,
+        .stud{
+            font-size: 80px;
         }
 
-        @media screen and (max-width: 768px){
-            
-            #check-price h1, 
-            .stud{
-                font-size: 80px;
-            }
-
-            
-            #zones .zone-cards-wrapper{
-                justify-content: center;
-            }
+        
+        .check-price-box, .equipment-container{
+            margin-left: 20px;
+            width: 964px;
         }
+
+        .burger{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .burger-line{
+            width: 100%;
+            height: 1.5px;
+            background-color: var(--light-blue, #ECEEF8);
+        }
+
+        .burger-line:last-child{
+            width: 80%;
+            align-self: flex-end;
+        }
+
+        .menu-content{
+            display: none;
+        }
+
+        
+        .flat-scheme-img{
+            height: 432px;
+            background-repeat: no-repeat;   
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        
+        #check-price h1, 
+        .stud{
+            font-size: 80px;
+        }
+
+        
+        #zones .zone-cards-wrapper{
+            justify-content: center;
+        }
+
+        .check-price-box, .equipment-container{
+            flex-direction: column;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .check-price-calc, .equipment-choose{
+            order: 2;
+            width: 92%;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        .check-price-img, .equipment-choose-img{
+            margin-top: 10px;
+            height: 585px;
+            border-radius: 10px;
+            background-position: center;
+        }
+
+        .check-price-box, .equipment-container{
+            margin-left: 0;
+            width: 100%;
+        }
+
+        #check-price .price-price{
+            font-size: 42px;
+        }
+
+        #check-price .price-pred{
+            font-size: 15px;
+        }
+
+        #equipment{
+            margin: 80px 0;
+            width: 100%;
+            background-image: url(images/back-4.svg);
+            background-size: contain;
+            color: var(--white, #FFF);
+            /* main medium */
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-family: Inter;
+        }   
+        
+        .equipment-card,
+        .equipment-card-content p{
+            font-size: 12px;
+            width: 100%;
+        }
+
+        .equipment-choosen-circle{
+            height: 9px;
+        }
+        
+        .equipment-choose-img{
+            display: none;
+        }
+        
+        .equipment-choose-img--mobile{
+            display: block;
+            width: auto;
+        }
+
+        .flat-scheme-img{
+            height: 317px;
+        }
+    }
 
         
         @media screen and (max-width: 440px){
@@ -519,7 +718,7 @@ text-transform: uppercase;
                 display: none;
             }
 
-            .check-price-box{
+            .check-price-box, .equipment-container{
                 flex-direction: column;
                 height: auto;
                 display: flex;
@@ -527,14 +726,15 @@ text-transform: uppercase;
                 align-items: center;
             }
 
-            .check-price-calc{
+            .check-price-calc, .equipment-choose{
                 order: 2;
-                width: 85%;
+                width: 320px;
                 border-top-left-radius: 0px;
+                background-size: cover;
                 border-bottom-right-radius: 10px;
             }
             
-            .check-price-img{
+            .check-price-img, .equipment-choose-img{
                 border-radius: 10px;
                 margin-top: 10px;
                 width: 320px;
@@ -585,7 +785,6 @@ text-transform: uppercase;
                 height: 41px;
             }
 
-            
             #zones .zone-cards-wrapper{
                 justify-content: center;
             }
@@ -605,9 +804,35 @@ text-transform: uppercase;
             #check-price .price-pred{
                 font-size: 12px;
             }
-            
-        }
 
+            .equipment-card{
+                width: 100%;
+                padding: 0;
+            }
+
+            .equipment-card-content{
+                padding: 10px;
+            }
+
+            .equipment-card-content p{
+                font-size: 12px;
+                width: 100%;
+            }
+
+
+            .equipment-choosen-circle{
+                height: 7px;
+            }
+            
+            .equipment-choose-img--mobile{
+                display: block;
+                width: auto;
+            }
+
+            .flat-scheme-img{
+                height: 143.947px;
+            }
+        }
 
     </style>
 
@@ -1019,15 +1244,83 @@ text-transform: uppercase;
 
         <section id="equipment">
             <div class="intro">
-        
                 <h1 class="stud">
-                    установлено новое съемочное                </h1>
+                    установлено новое съемочное                
+                </h1>
                 <h1 class="stud flex-center">
                     оборудование и осветительные приборы
                 </h1>
             </div>
+
+            <div class="equipment-container">
+                <div class="equipment-choose">
+                    <p>Нажмите на интересующее оборудование</p>
+
+                    <div class="equipment-cards-wrapper">
+                        <div class="equipment-card">
+                            <div class="equipment-card-content">
+                                <div class="equipment-card-icon">
+                                </div>
+                                <p>Видеокамеры Sony FX6 4K с ассортиментом оптики</p>
+                                <div class="equipment-choosen-circle"></div>
+                            </div>
+                        </div>
+                        <div class="equipment-choose-img--mobile">
+                        </div>
+                        <div class="equipment-card">
+                            <div class="equipment-card-content">
+                                <div class="equipment-card-icon">
+                                </div>
+                                <p>Микрофоны Октава МК-105 и радиопетлички Sennheiser</p>
+                            </div>
+                        </div>
+                        <div class="equipment-card">
+                            <div class="equipment-card-content">
+                                <div class="equipment-card-icon">
+                                </div>
+                                <p>Осветительные приборы</p>
+                            </div>
+                        </div>
+                        <div class="equipment-card">
+                            <div class="equipment-card-content">
+                                <div class="equipment-card-icon">
+                                </div>
+                                <p>Оборудование для поканальной записи и онлайн-трансляций</p>
+                            </div>
+                        </div>
+                        <div class="equipment-card">
+                            <div class="equipment-card-content">
+                                <div class="equipment-card-icon">
+                                </div>
+                                <p>акустический паралон, бас-ловушки и диффузоры для правильной акустики</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="equipment-choose-img">
+                </div>
+            </div>
+
         </section>
         
+        <section id="studio-placement">
+            <div class="intro">
+                <h1 class="stud">
+                    Удобное пространство,
+                </h1>
+                <h1 class="stud flex-center">
+                    в котором есть все необходимое
+                </h1>
+            </div>
+
+            <div class="flat-scheme">
+                <div class="flat-scheme-img">
+                </div>
+            </div>
+            
+        </section>
+
     </div>
 
 </body>    
