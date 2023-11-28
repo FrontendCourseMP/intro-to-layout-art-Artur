@@ -583,6 +583,73 @@
         background-size: contain;
         background-image: url(images/scheme.png);
     }
+    .fon-pink{
+        background: var(--peach, #F49C89);
+        stroke-width: 1px;
+        stroke: var(--white_light, rgba(255, 255, 255, 0.40));
+        stroke-width: 1px;
+        stroke: var(--white_light, rgba(255, 255, 255, 0.40));
+    }
+    .blue-text{
+        color: var(--dark, #34344E);
+        
+        /* H2 */
+        font-family: Steelfish;
+        font-size: 92px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%; /* 101.2px */
+        text-transform: uppercase;
+    }
+    .text-free{
+        
+        color: var(--dark, #34344E);
+        font-variant-numeric: lining-nums proportional-nums;
+
+        /* main */
+        height: 40px;
+        width: 289px;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 21px */
+        letter-spacing: -0.6px;
+        text-transform: uppercase;
+    }
+    .list-pink{
+        display: flex;
+        flex: 1 0 0;
+        width: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .link-pink-text{
+        flex: center;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        align-self: stretch;
+    }
+    .button-test-pink{
+        display-flex: flex;
+        border-radius: 100px;
+        background: var(--dark, #34344E);
+    }
+    .text-button{
+        color: var(--white, #FFF);
+        font-variant-numeric: lining-nums proportional-nums;
+
+        /* main medium */
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 21px */
+        letter-spacing: -0.6px;
+        text-transform: uppercase;
+    }
 
     @media screen and (max-width: 1024px){
         
@@ -1038,7 +1105,7 @@
                     Узнайте предварительную
                     стоимость
                 </h1>
-                <p>Работа команды, использование общей зоны, грим-пост и парковочные места включены в стоимость. Стоимость студии без сопровождения (команды) обсуждается индивидуально.</p>
+                <p class="flex-center">Работа команды, использование общей зоны, грим-пост и парковочные места включены в стоимость. Стоимость студии без сопровождения (команды) обсуждается индивидуально.</p>
             </div>
 
 
@@ -1320,8 +1387,32 @@
             </div>
             
         </section>
+        <div class="fon-pink">
+            <div>
+                <h2 class="stud">
+                    Получите бесплатный
+                </h2>
+                <h2 class="blue-text flex-center">
+                    тест-драйв
+                </h2>
+            </div>
+            <span class="link-pink-text">
+                <p class="text-free">
+                    Оставьте заявку и получите бесплатные 30 минут, за которые вы сможете:
+                </p>
+                <ul class="list-pink">
+                    <li class="text-free">Познакомиться со всеми опциями студии</li>
+                    <li class="text-free">Научиться пользоваться основным оборудованием</li>
+                    <li class="text-free">Получить рекомендации от специалистов по работе в кадре</li>
+                </ul>
+            </span>
+            <button class="button-test-pink">
+                <p class="text-button">Забронировать студию</p>
+            </button>
+            
+        </div>
 
     </div>
 
 </body>    
-</html> 
+</html>
