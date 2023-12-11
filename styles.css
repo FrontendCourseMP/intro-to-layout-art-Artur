@@ -401,7 +401,7 @@ header{
 }
 
 .form__list li input[type=radio]{
-    display: start;
+    display: none;
 }
 
 .form__list li label{
