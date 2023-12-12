@@ -793,7 +793,7 @@ header{
 .contact-list{
     color: var(--main);
     margin-top: 25px;
-    font-family: Inter;
+    font-family: inter;
     font-style: normal;
     font-weight: 500;
     line-height: 140%; /* 16.8px */
@@ -832,18 +832,10 @@ footer{
     border-bottom: 1px solid rgba(255, 255, 255, 0.20);
 }
 
-
-
-.footer-links__link--laba{
-    text-decoration: none;
-    font-family: Inter, sans-serif;
-    color: var(--second-main);
-}
-
 .footer-links__link{
     text-decoration: none;
     color: var(--sub-text);
-    font-family: Inter;
+    font-family: inter;
     font-style: normal;
     font-weight: 400;
     line-height: 140%; /* 16.8px */
