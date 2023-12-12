@@ -515,6 +515,7 @@ header{
 .details_active{
     min-width: 100%;
     margin-bottom: 10px;
+    max-width: 100%;
 }
 
 .section_5 summary img{
