@@ -973,4 +973,7 @@ footer{
     .wrapper{
         padding: 0 353px;
     }
+    .details_active{
+        min-width: 100%;
+    }
 }
