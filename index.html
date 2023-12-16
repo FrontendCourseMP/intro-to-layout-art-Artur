@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <title>TOCHKA</title>
 </head>
 <body>
@@ -13,40 +19,26 @@
             <a href="#">
                 <img src="imgs/logo.svg" alt="логотип">
             </a>
-            <a href="#" class="main-header__link link__adr">
+            <a href="#" class="main-header__link">
                 <img src="imgs/location.svg" alt="адресс">
-                <span class="main-header__link_span">8 минут от м. Тульская</span>
-            </a>
+                <span class="main-header__link_span">8 минут от м. Маяковская</span>
+            </a><br>
+            <a href="#" class="main-header__link">студии</a>
+            <a href="#" class="main-header__link">тест-драйв</a>
+            <a href="#" class="main-header__link">кейсы</a>
+            <a href="#" class="main-header__link">контакты</a><br>
+            <!-- <a href="#" target="_blank" class="main-header__link main-header__link--laba">Ссылка на лабу №8</a> -->
+            
+            <!-- <button class="main-header__burger"> 
+                    <img src="imgs/burger.svg" alt="бургер меню">
+                </button> -->
+
             <a href="#" class="main-header__link">
                 <img src="imgs/phone.svg" alt="номер телефона">
                 <span class="main-header__link_span">+7 909 151-08-70</span>
             </a>
             <a href="#" class="main-header__link">Ссылка на лабу №8</a>
             
-            <nav>
-                <button class="main-header__burger">
-                    <img src="imgs/burger.svg" alt="бургер меню">
-                </button>
-                <nav> 
-                    <ul class="main-header__list">
-                        <li>
-                            <a href="#" class="main-header__link">студии</a>
-                        </li>
-                        <li>
-                            <a href="#" class="main-header__link">тест-драйв</a>
-                        </li>
-                        <li>
-                            <a href="#" class="main-header__link">кейсы</a>
-                        </li>
-                        <li>
-                            <a href="#" class="main-header__link">контакты</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" class="main-header__link main-header__link--laba">Ссылка на лабу №8</a>
-                        </li>
-                    </ul>
-                </nav>
-            </nav>
         </div>
     </header>
     <main>
@@ -63,7 +55,7 @@
                     <img class="sect_1-img_2" src="imgs/studio2.jpg" alt="говорящий диктор">
                      видеосъёмки
                     </span>
-                    <span>и записи подкастов</span>
+                    <span class="main-header__image-span">и записи подкастов</span>
                 </p>
                 
                 <div class="section__bottom">
@@ -111,7 +103,7 @@
                         </div>
                     </li>
                     <li class="list__item">
-                        <img src="imgs/zone 3.jpg" alt="девушка перед камерой">
+                        <img src="imgs/zone 3 (2).jpg" alt="девушка перед камерой">
                         <div class="item__main">
                             <h3>вебинар</h3>
                             <p>Небольшая студия с акцентом на проведение вебинаров и запись видеоуроков,
@@ -124,7 +116,7 @@
                         </div>
                     </li>
                     <li class="list__item">
-                        <img src="imgs/zone 4.jpg" alt="девушка в студии">
+                        <img src="imgs/zone 4(1).jpg" alt="девушка в студии">
                         <div class="item__main">
                             <h3>Тут будет еще четвертая зона</h3>
                             <p>тут будет текст</p>
@@ -156,7 +148,7 @@
                     </li>
 
                     <li class="list__item">
-                        <img src="imgs/tv.jpg" alt="Человек, смотрящий телевизор">
+                        <img src="imgs/tv1.jpg" alt="Человек, смотрящий телевизор">
                         <div class="item__main">
                             <h3>Зона playback</h3>
                             <p>Установлена плазма 55’, чтобы смотреть трансляцию из студии в режиме реального времени</p>
@@ -478,39 +470,46 @@
     </main>
     <footer>
         <div class="footer">
-            <ul class="footer-links__grid">
-                <li class="footer-links__grid-item">
-                    <img class="logo" src="imgs/logo.svg">
-                </li>
-                <li class="footer-links__grid-item">
-                    <a href="#" class="footer-content">студии</a><br>
-                    <a href="#" class="footer-content">тест-драйв</a>
-                </li>
-                <li class="footer-links__grid-item">
-                    <a href="#" class="footer-content">кейсы</a><br>
-                    <a href="#" class="footer-content">контакты</a>
-                </li>
-                <li class="footer-links__grid-item">
-                    <img src="imgs/vk.svg" alt="логотип вк">
-                    <img src="imgs/youtube.svg" alt="логотип ютуба">
-                </li>
-                <li class="footer-content__grid-item">
-                    <div class="footer-links-grid__grid">
-                        <a href="#" class="footer-content">hello@tochkakontenta.ru</a>
-                        <a href="#" class="footer-content">+7 909 151-08-70</a>
-                        <a class="footer-content">
-                            <img src="imgs/telegram1.svg" alt="логотип телеграма">
-                            <img src="imgs/whatsapp1.svg" alt="логотип ватцапа">
-                        </a>
-                    </div>
-                </li>
-            </ul>
+            <container class="footer-flex">    
+                <ul class="footer-links__grid">
+                    <li class="footer-links__grid-item">
+                        <img class="logo" src="imgs/logo.svg">
+                    </li>
+                    <li class="footer-links__grid-item">
+                        <a href="#" class="footer-content">студии</a><br>
+                        <a href="#" class="footer-content">тест-драйв</a>
+                    </li>
+                    <li class="footer-links__grid-item">
+                        <a href="#" class="footer-content">кейсы</a><br>
+                        <a href="#" class="footer-content">контакты</a>
+                    </li>
+                    <li class="footer-links__grid-item">
+                        <img src="imgs/vk.svg" alt="логотип вк">
+                        <img src="imgs/youtube.svg" alt="логотип ютуба">
+                    </li>
+                    <li class="footer-content__grid-item">
+                        <div class="footer-links-grid__grid">
+                            <a href="#" class="footer-content">hello@tochkakontenta.ru</a>
+                            <a href="#" class="footer-content">+7 909 151-08-70</a>
+                            <a class="footer-content">
+                                <img src="imgs/telegram1.svg" alt="логотип телеграма">
+                                <img src="imgs/whatsapp1.svg" alt="логотип ватцапа">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </container>
+            <div class="footer-line"></div>
+            <div class="politics-center">
+                <div class="politics">
+                    <p class="politics-grid">ООО «Стрим Парк», ОГРН 1187847305931</p>
+                    <p class="politics-grid">Политика конфиденциальности</p>
+                    <p style="text-align: end; padding: 20px;">Разработка сайта — <a href="#">Kate lazareva</a></p>
+                </div>    
+            </div>
+            
         </div>
-        <div class="politics">
-            <p>ООО «Стрим Парк», ОГРН 1187847305931</p>
-            <p>Политика конфиденциальности</p>
-            <p>Разработка сайта — <a href="#">Kate lazareva</a></p>
-        </div>
+        
     </footer>
 </body>
 </html>
