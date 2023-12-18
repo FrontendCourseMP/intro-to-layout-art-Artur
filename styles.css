@@ -1,9 +1,11 @@
 @font-face {
     font-family: "Steelfish";
-    src: url("fonts/SteelfishRg-Bold.woff") format('woff');
-    font-weight: bold;
+    src: url("fonts/SteelfishLt-Regular.woff") format('woff'),
+         url("fonts/SteelfishRg-Bold.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }        
-
 
 html ::selection{
     color: var(--main);
@@ -18,7 +20,9 @@ html ::selection{
 ul {
     list-style-type: none;
 }
-
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Steelfish', sans-serif;
+}
 :root {
     --second-main: #F49C89;
     --main-text: #ECEEF8;
@@ -102,6 +106,7 @@ header{
 
 .section_1__main-p  {
     font-size: 5rem;
+    font-family: 'Steelfish', sans-serif;
     font-weight: 700;
     line-height: 110%;
     text-transform: uppercase;
@@ -186,6 +191,7 @@ header{
 .section_2 h2{
     font-size: 4rem;
     font-style: normal;
+    font-family: 'Steelfish', sans-serif;
     line-height: 120%; /* 44px */
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -330,6 +336,7 @@ header{
 }
 
 .section_4 h2{
+    font-family: 'Steelfish', sans-serif;
     font-size: 4rem;
     font-style: normal;
     font-weight: 700;
@@ -342,7 +349,7 @@ header{
     font-weight: 400;
     line-height: 140%; /* 16.8px */
     text-transform: uppercase;
-    font-family: inter, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 30px;
 }
 
@@ -508,6 +515,7 @@ header{
 
 
 .section_5 h2 {
+    font-family: 'Steelfish', sans-serif;
     font-size: 4rem;
     font-style: normal;
     font-weight: 700;
@@ -539,6 +547,9 @@ header{
 .section_6 h2 span{
     margin-left: 57px;
 }
+.section_6 h2{
+    font-family: 'Steelfish', sans-serif;
+}
 
 .section_6{
     background: url('../img/Union.svg') 0 0 no-repeat;
@@ -567,6 +578,7 @@ header{
 }
 
 .section_7 h2{
+    font-family: 'Steelfish', sans-serif;
     color: var(--sub-text);
     font-size: 4rem;
     font-style: normal;
@@ -574,7 +586,6 @@ header{
     line-height: 110%; /* 44px */
     text-transform: uppercase;
     margin-bottom: 30px;
-    font-family: steelfish;
 }
 
 .section_7 h2 span{
@@ -640,6 +651,7 @@ header{
 }
 
 .section_8 h2 {
+    font-family: 'Steelfish', sans-serif;
     font-size: 4rem;
     font-style: normal;
     font-weight: 700;
@@ -670,6 +682,7 @@ header{
 }
 
 .section_9-top h2{
+    font-family: 'Steelfish', sans-serif;
     font-size: 4rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -715,6 +728,7 @@ header{
 }
 
 .section_9-main h2{
+    font-family: 'Steelfish', sans-serif;
     color: var(--main-text);
     font-size: 4rem;
     font-style: normal;
@@ -736,6 +750,7 @@ header{
 }
 
 .section_9-main li h3{
+    font-family: 'Steelfish', sans-serif;
     font-size: 3rem;
     font-style: normal;
     font-weight: 400;
@@ -762,6 +777,7 @@ header{
 }
 
 .section_10 h2 {
+    font-family: 'Steelfish', sans-serif;
     color: var(--main-text);
     font-size: 4rem;
     font-weight: 700;
@@ -846,7 +862,7 @@ header{
     padding-top: 25px;
     color: rgba(255, 255, 255, 0.40);
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: Inter;
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     line-height: 140%; 
