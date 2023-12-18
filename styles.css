@@ -115,13 +115,13 @@ header{
 .sect_1-img_1{
     border-radius: 200px;
     object-fit: cover;
-    width: 85px;
+    width: 282px;
 }
 
 .sect_1-img_2{
     border-radius: 200px;
     object-fit: cover;
-    width: 62px;
+    width: 186px;
 }
 
 
@@ -184,12 +184,12 @@ header{
     justify-content: center;
 }
 
-.section_2{
+.section_2{    
     background: url('../imgs/Vector\ 1.svg') 0 0 no-repeat; 
 }
 
 .section_2 h2{
-    font-size: 4rem;
+    font-size: 3.3rem;
     font-style: normal;
     font-family: 'Steelfish', sans-serif;
     line-height: 120%; /* 44px */
