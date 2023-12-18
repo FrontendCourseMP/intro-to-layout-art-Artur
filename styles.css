@@ -1,10 +1,10 @@
+
 @font-face {
-    font-family: "steelfish";
-    src: url("fonts/Inter-Bold.woff2") format("woff2");
+    font-family: "Steelfish";
+    src: url(fonts/SteelfishRoundedRegular.woff) format('woff');
     font-weight: normal;
-    font-style: normal;
-    font-display: swap;
 }
+
 
 
 html ::selection{
@@ -37,7 +37,7 @@ html, body{
 
 body{
     font-size: 1.2rem;
-    font-family: "steelfish", sans-serif;
+    font-family: "Steelfish", sans-serif;
     color: var(--main-text);
     background-color: var(--main);
 }
