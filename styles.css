@@ -1,10 +1,8 @@
-
 @font-face {
     font-family: "Steelfish";
-    src: url(fonts/SteelfishRoundedRegular.woff) format('woff');
-    font-weight: normal;
-}
-
+    src: url("fonts/SteelfishRg-Bold.woff") format('woff');
+    font-weight: bold;
+}        
 
 
 html ::selection{
@@ -27,7 +25,7 @@ ul {
     --main: #34344E;
     --sub-text: #FFF;
     --line-color: rgba(52, 52, 78, 0.50);
-  }  
+}  
 
 html, body{
     min-width: 100%;
@@ -37,7 +35,6 @@ html, body{
 
 body{
     font-size: 1.2rem;
-    font-family: "Steelfish", sans-serif;
     color: var(--main-text);
     background-color: var(--main);
 }
@@ -183,7 +180,7 @@ header{
 }
 
 .section_2{
-    background: url('../imgs/Vector\ 1.svg') 0 0 no-repeat;
+    background: url('../imgs/Vector\ 1.svg') 0 0 no-repeat; 
 }
 
 .section_2 h2{
@@ -290,6 +287,7 @@ header{
     color: var(--main);
 } 
 .section_3{
+    font-family: "Steelfish", sans-serif; 
     margin-top: 85px;
     margin-bottom: 57px;
 }
@@ -553,6 +551,7 @@ header{
 }
 
 .section_7 {
+    
     padding-top: 85px;
     padding-bottom: 85px;
     background: url('../img/Vector\ 13.svg') no-repeat;
