@@ -115,13 +115,13 @@ header{
 .sect_1-img_1{
     border-radius: 200px;
     object-fit: cover;
-    width: 282px;
+    width: 200px;
 }
 
 .sect_1-img_2{
     border-radius: 200px;
     object-fit: cover;
-    width: 186px;
+    width: 125px;
 }
 
 
@@ -189,8 +189,9 @@ header{
 }
 
 .section_2 h2{
-    font-size: 3.3rem;
+    font-size: 4rem;
     font-style: normal;
+    text-align: center;
     font-family: 'Steelfish', sans-serif;
     line-height: 120%; /* 44px */
     text-transform: uppercase;
