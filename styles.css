@@ -243,7 +243,7 @@ header{
 
 .item__main h3{
     font-family: 'Roboto Condensed';
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 500;
     line-height: 110%; /* 33px */
     letter-spacing: 0.6px;
@@ -313,7 +313,7 @@ header{
 
 
 .section_3__span-2{
-    margin-left: 57px;
+    margin-left: 10px;
 }
 
 .section_3__list{
