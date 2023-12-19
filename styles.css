@@ -231,7 +231,8 @@ header{
 }
 
 .list__item img{
-    min-width: 100%;
+    height: 336px;
+    width: 100%;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -322,8 +323,8 @@ header{
 }
 
 .section_3__list .list__item {
-    min-width: 261px;
-    max-height: 457px; 
+    width: 261px;
+    height: 457px; 
 }
 
 .section_3__list li img{
@@ -363,10 +364,11 @@ header{
 }
 
 .form__main-image{
-    max-width: 100%;
+    max-width: 1216px;
+    max-height: 1228px;
     border-radius: 10px;
     object-fit: cover;
-    min-width: 100%;
+
 }
 
 .main-form{
