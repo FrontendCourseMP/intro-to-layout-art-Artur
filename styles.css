@@ -23,6 +23,7 @@ h1 h2 h3 h4 h5 h6 {
 }
 
 :root {
+    font-size: 62.5%;
     --second-main: #F49C89;
     --main-text: #ECEEF8;
     --main: #34344E;
@@ -31,7 +32,7 @@ h1 h2 h3 h4 h5 h6 {
 }  
 
 *{
-    font-size: 62.5%;
+    
 }
 
 body{
@@ -186,7 +187,7 @@ header{
 }
 
 .section_2 h2{
-    font-size: 9.2rem;
+    font-size: 5rem;
     font-style: normal;
     text-align: center;
     font-family: 'Steelfish', sans-serif;
@@ -237,7 +238,7 @@ header{
 
 .item__main h3{
     font-family: 'Steelfish';
-    font-size: 2.5rem;
+    font-size: 5rem;
     font-weight: 500;
     line-height: 110%; /* 33px */
     letter-spacing: 0.6px;
@@ -296,7 +297,7 @@ header{
 }
 
 .section_3 h2{
-    font-size: 4rem;
+    font-size: 5rem;
     font-style: normal;
     font-weight: 600;
     line-height: 120%; /* 44px */
@@ -334,7 +335,7 @@ header{
 
 .section_4 h2{
     font-family: 'Steelfish', sans-serif;
-    font-size: 4rem;
+    font-size: 5rem;
     font-style: normal;
     font-weight: 700;
     line-height: 110%; 
@@ -513,7 +514,7 @@ header{
 
 .section_5 h2 {
     font-family: 'Steelfish';
-    font-size: 4rem;
+    font-size: 5rem;
     font-style: normal;
     font-weight: 700;
     line-height: 110%; /* 44px */
@@ -533,7 +534,7 @@ header{
 
 .section_6 h2{
     margin-top: 85px;
-    font-size: 4rem;
+    font-size: 5rem;
     font-style: normal;
     font-weight: 700;
     line-height: 110%; /* 44px */
@@ -577,7 +578,7 @@ header{
 .section_7 h2{
     font-family: 'Steelfish', sans-serif;
     color: var(--sub-text);
-    font-size: 4rem;
+    font-size: 5rem;
     font-style: normal;
     font-weight: 700;
     line-height: 110%; /* 44px */
@@ -649,7 +650,7 @@ header{
 
 .section_8 h2 {
     font-family: 'Steelfish', sans-serif;
-    font-size: 4rem;
+    font-size: 5rem;
     font-style: normal;
     font-weight: 700;
     line-height: 110%; /* 44px */
@@ -680,7 +681,7 @@ header{
 
 .section_9-top h2{
     font-family: 'Steelfish', sans-serif;
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     font-weight: bold;
@@ -727,7 +728,7 @@ header{
 .section_9-main h2{
     font-family: 'Steelfish', sans-serif;
     color: var(--main-text);
-    font-size: 4rem;
+    font-size: 5rem;
     font-style: normal;
     font-weight: 700;
     line-height: 110%; /* 44px */
@@ -776,7 +777,7 @@ header{
 .section_10 h2 {
     font-family: 'Steelfish', sans-serif;
     color: var(--main-text);
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 700;
     line-height: 110%; /* 44px */
     text-transform: uppercase;
