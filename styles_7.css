@@ -21,12 +21,11 @@ ul {
     --line-color: rgba(52, 52, 78, 0.50);
   }  
 
-html, body{
+*{
     font-size: 62.5%;
 }
 
 body{
-    font-size: 1.2rem;
     font-family: 'Steelfish', sans-serif;
     color: var(--main-text);
     background-color: var(--main);
@@ -60,7 +59,7 @@ body{
 }
 
 .main-header__phone_link{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--sub-text);
     display: flex;
     align-items: center;

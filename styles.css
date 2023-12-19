@@ -2,9 +2,6 @@
     font-family: "Steelfish";
     src: url("fonts/SteelfishLt-Regular.woff") format('woff'),
          url("fonts/SteelfishRg-Bold.woff") format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
 }        
 
 html ::selection{
@@ -20,6 +17,7 @@ html ::selection{
 ul {
     list-style-type: none;
 }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Steelfish', sans-serif;
 }
@@ -31,20 +29,17 @@ h1, h2, h3, h4, h5, h6 {
     --line-color: rgba(52, 52, 78, 0.50);
 }  
 
-html, body{
-    min-width: 100%;
-    font-size: 16px;
-    overflow-x: hidden;
+*{
+    font-size: 62.5%;
 }
 
 body{
-    font-size: 1.2rem;
     color: var(--main-text);
     background-color: var(--main);
 }
 
 header{
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .main-header .wrapper {
@@ -106,7 +101,7 @@ header{
 }
 
 .section_1__main-p  {
-    font-size: 5rem;
+    font-size: 13rem;
     font-family: 'Steelfish', sans-serif;
     font-weight: 700;
     line-height: 110%;
@@ -144,7 +139,6 @@ header{
 }
 
 .main-header__image-span ::before{
-    content: 'qweqweq';
     background-size: 100px 100px;
     display: block;
     position: absolute;
@@ -191,7 +185,7 @@ header{
 }
 
 .section_2 h2{
-    font-size: 4rem;
+    font-size: 9.2rem;
     font-style: normal;
     text-align: center;
     font-family: 'Steelfish', sans-serif;
