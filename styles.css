@@ -256,7 +256,7 @@ header{
     font-family: 'Steelfish';
     font-size: 5rem;
     font-weight: 500;
-    line-height: 110%; /* 33px */
+    line-height: 110%;
     letter-spacing: 0.6px;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -282,7 +282,7 @@ header{
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
-    line-height: 140%; /* 16.8px */
+    line-height: 140%;
     letter-spacing: -0.24px;
     text-transform: uppercase;
 }
@@ -298,7 +298,7 @@ header{
     color: var(--second-main);
     font-family: 'Inter', sans-serif;
     text-transform: uppercase;
-    line-height: 140%; /* 16.8px */
+    line-height: 140%; 
     letter-spacing: -0.48px;
 }
 
@@ -317,7 +317,7 @@ header{
     font-size: 5rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 120%; /* 44px */
+    line-height: 120%; 
     text-transform: uppercase;
     margin-bottom: 30px;
     letter-spacing: 1px;
@@ -793,7 +793,7 @@ header{
     color: var(--main-text);
     font-size: 5rem;
     font-weight: 700;
-    line-height: 110%; /* 44px */
+    line-height: 110%; 
     text-transform: uppercase;
     margin-bottom: 30px;
 }
@@ -954,6 +954,11 @@ header{
     }
     footer{
         font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 361px){
+    :root{
+        font-size: 40%;
     }
 }
 @media screen and (max-width: 361px){
