@@ -982,7 +982,7 @@ header{
 }
 @media screen and (max-width: 361px){
     :root{
-        font-size: 23%;
+        font-size: 30%;
     }
     .main-header__loc{
         display: none;
@@ -1006,7 +1006,10 @@ header{
         width: 80px;
     }
     .sect_1-img_2{
-        width: 80px;
+        width: 70px;
+    }
+    .section_2 h2{
+        text-align: start;
     }
     
 
