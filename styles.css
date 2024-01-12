@@ -1011,6 +1011,9 @@ header{
     .section_2 h2{
         text-align: start;
     }
+    .list__item{
+        min-width: 80%;
+    }
     
 
 }
