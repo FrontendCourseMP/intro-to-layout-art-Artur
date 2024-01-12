@@ -4,11 +4,19 @@
          url("fonts/SteelfishRg-Bold.woff") format('woff');
 }        
 
+* {
+    box-sizing: border-box;
+}
+
 html ::selection{
     color: var(--main);
     background-color: var(--second-main);
 }
 
+html, body{
+    min-width: 100%;
+    overflow-x: hidden;
+}
 
 a:visited {
     color:  white;
