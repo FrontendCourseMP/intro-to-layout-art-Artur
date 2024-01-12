@@ -1,0 +1,11 @@
+legend{
+    font-family: 'Steelfish';
+}
+label{
+    font-family: "Inter";
+}
+.main-text{
+    font-size: 2rem;
+    color: #F49C89;
+    margin-bottom: 20px;
+}

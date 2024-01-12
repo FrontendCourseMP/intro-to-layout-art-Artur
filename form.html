@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style_8.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>TOCHKA</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="wrapper">
+            <a href="###">
+                <img src="imgs/logo.svg" alt="логотип">
+            </a>
+            <a href="#" class="main-header__link">
+                <img src="imgs/location.svg" alt="адресс">
+                <span class="main-header__link_span">8 минут от м. Маяковская</span>
+            </a><br>
+            <a href="#" class="main-header__link">студии</a>
+            <a href="#" class="main-header__link">тест-драйв</a>
+            <a href="#" class="main-header__link">кейсы</a>
+            <a href="#" class="main-header__link">контакты</a>
+            <a href="form.html" class="main-header__link">лабораторная 8</a><br>
+            <!-- <a href="#" target="_blank" class="main-header__link main-header__link--laba">Ссылка на лабу №8</a> -->
+            
+            <!-- <button class="main-header__burger"> 
+                    <img src="imgs/burger.svg" alt="бургер меню">
+                </button> -->
+
+            <a href="#" class="main-header__link">
+                <img src="imgs/phone.svg" alt="номер телефона">
+                <span class="main-header__link_span">+7 909 151-08-70</span>
+            </a>
+            <!-- <a href="#" class="main-header__link">Ссылка на лабу №8</a> -->
+            
+        </div>
+    </header>
+
+    <main>
+        <form action="//httpbin.org/post" method="POST">
+            <fieldset>
+                <legend  style="font-size: 4rem;" class="main-text">Личная информация</legend>
+                <label for="name" style="font-size: 2rem;"> Имя <span style="color: red;">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                <br>
+
+                <label for="dob" style="font-size: 2rem;">Дата рождения <span style="color: red;">*</span></label>
+                <input type="date" id="dob" name="dob" required>
+                <br>
+
+                <label style="font-size: 2rem;">Пол <span style="color: red;">*</span></label>
+                <label style="font-size: 1.5rem;"><input type="radio" name="gender" value="male"> Мужской</label>
+                <label style="font-size: 1.5rem;"><input type="radio" name="gender" value="female"> Женский</label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend style="font-size: 4rem;" class="main-text">Контактные данные</legend>
+                <label for="password" style="font-size: 2rem;">Пароль <span style="color: red;">*</span></label>
+                <input type="password" id="password" name="password" required>
+                <br>
+    
+                <label for="email" style="font-size: 2rem;">Email <span style="color: red;">*</span></label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                <br>
+
+                <label for="phone" style="font-size: 2rem;">Телефон<span style="color: red;">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (123) 456-78-90">
+                <br>
+    
+                <label for="contact-time" style="font-size: 2rem;">Удобный интервал для связи</label>
+                <select id="contact-time" name="contact-time">
+                    <option value="morning">Утро</option>
+                    <option value="day">День</option>
+                    <option value="evening">Вечер</option>
+                    <option value="night">Ночь</option>
+                </select>
+            </fieldset>
+            <br>
+            <button type="submit" class="main-text">
+                Отправить
+            </button>
+            <button type="reset" class="main-text">
+                Сбросить
+            </button>
+            
+        </form>
+    </main>
+    
+    <footer>
+        <div class="footer">
+            <container class="footer-flex">    
+                <ul class="footer-links__grid">
+                    <li class="footer-links__grid-item">
+                        <img class="logo" src="imgs/logo.svg">
+                    </li>
+                    <li class="footer-links__grid-item">
+                        <a href="#" class="footer-content">студии</a><br>
+                        <a href="#" class="footer-content">тест-драйв</a>
+                    </li>
+                    <li class="footer-links__grid-item">
+                        <a href="#" class="footer-content">кейсы</a><br>
+                        <a href="#" class="footer-content">контакты</a>
+                    </li>
+                    <li class="footer-links__grid-item">
+                        <img src="imgs/vk.svg" alt="логотип вк">
+                        <img src="imgs/youtube.svg" alt="логотип ютуба">
+                    </li>
+                    <li class="footer-content__grid-item">
+                        <div class="footer-links-grid__grid">
+                            <a href="#" class="footer-content">hello@tochkakontenta.ru</a>
+                            <a href="#" class="footer-content">+7 909 151-08-70</a>
+                            <a href="grid.html" class="footer-content">7 лабораторная</a>
+                            <a class="footer-content">
+                                <img src="imgs/telegram1.svg" alt="логотип телеграма">
+                                <img src="imgs/whatsapp1.svg" alt="логотип ватцапа">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </container>
+            <div class="footer-line"></div>
+            <div class="politics-center">
+                <div class="politics">
+                    <p class="politics-grid">ООО «Стрим Парк», ОГРН 1187847305931</p>
+                    <p class="politics-grid">Политика конфиденциальности</p>
+                    <p style="text-align: end; padding: 20px;">Разработка сайта — <a href="#">Kate lazareva</a></p>
+                </div>    
+            </div>
+            
+        </div>
+        
+    </footer>
+
+</body>
+</html>
