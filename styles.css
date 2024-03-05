@@ -8,16 +8,6 @@
     box-sizing: border-box;
 }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Четвертый параметр - это прозрачность (от 0 до 1) */
-    z-index: 999; /* Устанавливает слой поверх остального контента */
-}
-
 html ::selection{
     color: var(--main);
     background-color: var(--second-main);
@@ -42,7 +32,7 @@ h1 h2 h3 h4 h5 h6 {
 
 :root {
     font-size: 62.5%;
-    --second-main: #F49C89;
+    --second-main: #ba624e;
     --main-text: #ECEEF8;
     --main: #34344E;
     --sub-text: #FFF;
