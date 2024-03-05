@@ -32,10 +32,10 @@ h1 h2 h3 h4 h5 h6 {
 
 :root {
     font-size: 62.5%;
-    --second-main: black;
+    --second-main: #F49C89;
     --main-text: #ECEEF8;
     --main: #34344E;
-    --sub-text: #FFF;
+    --sub-text: #000000;
     --line-color: rgba(52, 52, 78, 0.50);
 }  
 
