@@ -35,7 +35,7 @@ h1 h2 h3 h4 h5 h6 {
     --second-main: #F49C89;
     --main-text: #ECEEF8;
     --main: #34344E;
-    --sub-text: #000000;
+    --sub-text: #ffffff;
     --line-color: rgba(52, 52, 78, 0.50);
 }  
 
@@ -172,7 +172,7 @@ summary
 .section_1__button{
     width: 270px;
     padding: 12px 30px;
-    color: var(--sub-text);
+    color: black;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 500;
