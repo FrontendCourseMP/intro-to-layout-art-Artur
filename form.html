@@ -56,27 +56,39 @@
             <br>
             <fieldset>
                 <legend style="font-size: 4rem;" class="main-text">Контактные данные</legend>
-                <label for="password" style="font-size: 2rem;">Пароль <span style="color: red;">*</span></label>
-                <input type="password" id="password" name="password" required>
+                <label for="password" style="font-size: 2rem;">Пароль <span style="color: red;">*</span>
+                    <input type="password" id="password" name="password" required>
+                </label>
                 <br>
     
-                <label for="email" style="font-size: 2rem;">Email <span style="color: red;">*</span></label>
-                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                <label for="email" style="font-size: 2rem;">Email <span style="color: red;">*</span>
+                    <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                </label>
                 <br>
 
-                <label for="phone" style="font-size: 2rem;">Телефон<span style="color: red;">*</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="+7 (123) 456-78-90">
+                <label for="phone" style="font-size: 2rem;">Телефон<span style="color: red;">*</span>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (123) 456-78-90">
+                </label>
                 <br>
     
                 <label for="contact-time" style="font-size: 2rem;">Удобный интервал для связи</label>
-                <select id="contact-time" name="contact-time">
-                    <option value="morning">Утро</option>
-                    <option value="day">День</option>
-                    <option value="evening">Вечер</option>
-                    <option value="night">Ночь</option>
-                </select>
+                        <label class="label">
+                            <input type="checkbox" name="morning" >
+                            Утро
+                        </label>
+                        <label class="label" >
+                            <input type="checkbox" name="day" >
+                            День
+                        </label>
+                        <label class="label">
+                            <input type="checkbox" name="evening" >
+                            Вечер
+                        </label>
+                        <label class="label">
+                            <input type="checkbox" name="night" >
+                            Ночь
+                        </label>
             </fieldset>
-            <br>
             <button type="submit" class="main-text">
                 Отправить
             </button>
@@ -86,6 +98,81 @@
             
         </form>
         <h1><a href="demo.html" class="main-header__link">лабораторная 9</a></h1>
+        
+        <form action="post" class="form main-form main-form--2">
+            <dl>
+                <dt>Псевдоэлемент</dt>
+                <dd> Элементы, которых не существует в HTML-разметке. Они создаются и позиционируются исключительно при помощи CSS. Чаще всего используются для создания различных декоративных элементов (которые не несут содержательного смысла).</dd>
+                <dt>Псевдокласс</dt>
+                <dd>Особый вид селектора, который уточняет тип или состояние. Обычно это какой-то качественный признак: реакция на наведение курсора, порядок следования и другие.</dd>
+            </dl>
+            <fieldset class="main-form--2__fieldset">
+                <legend>Псевдоэлементы</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="psclass" id="::before" value="::before" checked>
+                        <label for="::before">::before</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="psclass" id="::after" value="::after" checked>
+                        <label for="::after">::after</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="psclass" id="::first-letter" value="::first-letter" checked>
+                        <label for="::first-letter">::first-letter</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="psclass" id="::selection" value="::selection">
+                        <label for="::selection" aria-checked="true">::selection</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="psclass" id="::first-line" value="::first-line">
+                        <label for="::first-line">::first-line</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="psclass" id="::placeholder" value="::placeholder" checked>
+                        <label for="::placeholder">::placeholder</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="psclass" id="::marker" value="::marker">
+                        <label for="::marker">::marker</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="main-form--2__fieldset">
+                <legend>Псевдоклассы</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="psclass" id=":active" value=":active" checked>
+                        <label for=":active">:active</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="psclass" id=":hover" value=":hover" checked>
+                        <label for=":hover">:hover</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="psclass" id=":focus" value=":focus" checked>
+                        <label for=":focus">:focus</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="psclass" id=":checked" value=":checked" checked>
+                        <label for=":checked" aria-checked="true">:checked</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="psclass" id=":not" value=":not">
+                        <label for=":not">:not</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="psclass" id=":root" value=":root" checked>
+                        <label for=":root">:root</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="psclass" id=":empty" value=":empty">
+                        <label for=":empty">:empty</label>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
     </main>
     
     <footer>
@@ -93,7 +180,7 @@
             <container class="footer-flex">    
                 <ul class="footer-links__grid">
                     <li class="footer-links__grid-item">
-                        <img class="logo" src="imgs/logo.svg">
+                        <img class="logo-logoo" src="imgs/logo.svg">
                     </li>
                     <li class="footer-links__grid-item">
                         <a href="#" class="footer-content">студии</a><br>

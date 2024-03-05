@@ -58,7 +58,7 @@ header{
     padding: 16px 20px 17px;
     background-color: var(--main);
 }
-
+summary
 .second-main-part ::selection{
     color: var(--second-main);
     background-color: var(--main);
