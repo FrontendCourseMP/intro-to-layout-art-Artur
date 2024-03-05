@@ -172,7 +172,7 @@ summary
 .section_1__button{
     width: 270px;
     padding: 12px 30px;
-    color: black;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 500;
