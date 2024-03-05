@@ -8,6 +8,16 @@
     box-sizing: border-box;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Четвертый параметр - это прозрачность (от 0 до 1) */
+    z-index: 999; /* Устанавливает слой поверх остального контента */
+}
+
 html ::selection{
     color: var(--main);
     background-color: var(--second-main);
