@@ -32,7 +32,7 @@ h1 h2 h3 h4 h5 h6 {
 
 :root {
     font-size: 62.5%;
-    --second-main: #ba624e;
+    --second-main: black;
     --main-text: #ECEEF8;
     --main: #34344E;
     --sub-text: #FFF;
