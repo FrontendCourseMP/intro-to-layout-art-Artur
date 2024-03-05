@@ -189,7 +189,21 @@ summary
     border: 2px solid var(--second-main);
     padding: 11px 28px;
 }
-
+.skip-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 10px 15px;
+    color: #18191c;
+    background: #10F3AF;
+    transform: translateY(-100%);
+    align-items: center;
+}
+  .skip-link:focus {
+    transform: translateY(20%);
+}
+    
 .section__bottom{
     margin: 20px 0;
     align-items: center;
